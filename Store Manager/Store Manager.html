@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Debenhams | Store Manager</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--fonts-->
+<!-- <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'><!--//fonts-->
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<script src="js/simpleCart.min.js"> </script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="header-left">
+			<div class="col-md-6">
+					<h1><img src = "images/debenhams.png" width="40%" height="10%" /></h1>
+				</div>
+				<div class="search-box">
+					<div id="sb-search" class="sb-search">
+
+					</div>
+				</div>
+
+			</div>
+				
+		</div>
+		</div>
+		<div class="container">
+			<div class="head-top">
+				
+		</div>
+		</div>
+	</div>
+	<!-- grow -->
+	<div class="grow">
+		<div class="container">
+			<h2>STORE MANAGER</h2>
+		</div>
+		
+	</div>
+	</br>
+	<!-- grow -->
+<div class="container">
+	<div class="col-md-4">
+					<div class="col-md1 text-center amet-sed agileits-w3layouts">
+					<h4>FULL SLEEVE</h4>
+
+						<img class="img-responsive" src="images/fullsleeve.jpg" alt="">
+						
+					</div>	
+					</br>
+					<h4  class="text-center">Number of people visited today</h4>
+					<br>
+												<p class="text-center" id="resnumfull"></p>
+    <input type="number" class="form-control form-control-success" id="numfull" >
+	<hr>
+
+	<h4  class="text-center">Time spent on this section ( in mins )</h4>
+					<br>
+								<p class="text-center" id="restimefull"></p>
+
+    <input type="number" class="form-control form-control-success" id="timefull"  >
+
+</div>	
+<div class="col-md-4">
+					<div class="col-md1 text-center amet-sed agileits-w3layouts">
+					<h4>ROUND NECK</h4>
+						<img class="img-responsive" src="images/roundneck.jpg" alt="">
+					</div>	
+					</br>
+
+					<h4  class="text-center">Number of people visited today</h4>
+					<br>
+												<p class="text-center" id="resnumround"></p>
+    <input type="number" class="form-control form-control-success" id="numround" >
+		<hr>
+
+		<h4  class="text-center">Time spent on this section ( in mins )</h4>
+					<br>
+								<p class="text-center" id="restimeround"></p>
+
+    <input type="number" class="form-control form-control-success" id="timeround"  >
+
+</div>	
+<div class="col-md-4">
+					<div class="col-md1 text-center amet-sed agileits-w3layouts">
+					<h4>V NECK</h4>
+						<img class="img-responsive" src="images/vneck.jpg" alt="">
+					
+					</div>	
+					</br>
+							<div class="result">
+					</div>
+				<h4  class="text-center">Number of people visited today</h4>
+					<br>
+												<p class="text-center" id="resnumv"></p>
+
+    <input type="number" class="form-control form-control-success" id="numv" >
+		<hr>
+
+	<h4  class="text-center">Time spent on this section ( in mins )</h4>
+					<br>
+								<p class="text-center" id="restimev"></p>
+
+    <input type="number" class="form-control form-control-success" id="timev" >
+
+</div>		
+</div>	
+</br>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+	    <input type="button" class="btn btn-success btn-block" id="resultbtn" value="SHOW ME THE RESULTS" onclick="evaluateit()">
+	</div>
+</div>
+
+<script>
+				function evaluateit(){
+				var numfull = document.getElementById('numfull').value.trim();
+				var timefull = document.getElementById('timefull').value.trim();
+				var numround = document.getElementById('numround').value.trim();
+				var timeround = document.getElementById('numround').value.trim();
+				var numv = document.getElementById('numv').value.trim();
+				var timev = document.getElementById('timev').value.trim();
+
+				if(numfull!=""){
+				localStorage.setItem("numfull" , numfull);
+				}
+				
+								if(timefull!=""){
+				localStorage.setItem("timefull" , timefull);
+				}
+				
+								if(numround!=""){
+				localStorage.setItem("numround" , numround);
+				}
+				
+								if(timeround!=""){
+				localStorage.setItem("timeround" , timeround);
+				}
+				
+								if(numv!=""){
+				localStorage.setItem("numv" , numv);
+				}
+				
+								if(timev!=""){
+				localStorage.setItem("timev" , timev);
+
+				}
+				document.getElementById("numfull").style.display = "none";
+				document.getElementById("timefull").style.display = "none";
+				document.getElementById("numround").style.display = "none";
+				document.getElementById("timeround").style.display = "none";
+				document.getElementById("numv").style.display = "none";
+				document.getElementById("timev").style.display = "none";
+				document.getElementById("resultbtn").style.display = "none";
+				
+				document.getElementById("resnumfull").innerHTML =  localStorage.getItem("numfull");
+				document.getElementById("restimefull").innerHTML =  localStorage.getItem("timefull");
+				document.getElementById("resnumround").innerHTML =   localStorage.getItem("numround");
+				document.getElementById("restimeround").innerHTML = localStorage.getItem("timeround");
+				document.getElementById("resnumv").innerHTML =   localStorage.getItem("numv");
+				document.getElementById("restimev").innerHTML =   localStorage.getItem("timev");
+				}
+				</script>
+
+
+</br>					
+<!--//content-->
+
+				
+</body>
+</html>
+			
